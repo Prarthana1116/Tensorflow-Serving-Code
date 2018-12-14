@@ -2,7 +2,9 @@
 Here is a video tutorial for Tensorflow serving.
 
 1. Deploy your own Tensorflow models in Tensorflow Servings
-https://www.youtube.com/watch?v=SsaJJsRvwIs&t=144s
+
+Link: https://www.youtube.com/watch?v=SsaJJsRvwIs&t=144s
 
 2 .Tensorflow Serving using retrained inception graph
-https://www.youtube.com/watch?v=9l2lkQtinx4&t=124s
+
+Link: https://www.youtube.com/watch?v=9l2lkQtinx4&t=124s
