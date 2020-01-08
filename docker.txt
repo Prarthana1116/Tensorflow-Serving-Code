@@ -1,0 +1,109 @@
+2. //CATEGORY		
+sudo docker start 4df722301e7e		
+sudo docker start 4df722301e7e		
+sudo docker start 4df722301e7e		
+		
+3. //RIB		
+sudo docker start 10e1d075bd55		
+sudo docker attach 10e1d075bd55		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_Rib &> rib_log &		
+		
+4. //LinearBush		
+sudo docker start 576322b10ae5		
+sudo docker attach 576322b10ae5		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_LinearBushing &> linerbush_log &		
+		
+5. //HeightAdjPin		
+sudo docker start d4937db9dbc7		
+sudo docker attach d4937db9dbc7		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_HeightAdjPin &> heightadjpin_log &		
+		
+6. //InspectionPin		
+sudo docker start 56ea5808895c		
+sudo docker attach 56ea5808895c		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_InspectionPins &> inspectionpins_log &		
+		
+7. //ShaftSupport		
+sudo docker start b5aea1532447		
+sudo docker attach b5aea1532447		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_ShaftSupport &> shaftsupport_log &		
+		
+8. //JigBush		
+sudo docker start e047d79ef513		
+sudo docker attach e047d79ef513		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_JigBush &> jigbush_log &		
+		
+9. //OilFreeBushing		
+sudo docker start d8964963aaec		
+sudo docker attach d8964963aaec		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_OilFreeBushing &> oilfreebushing_log &		
+		
+10. //SupportUnit		
+sudo docker start 781f1b70f22d		
+sudo docker attach 781f1b70f22d		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_SupportUnit &> supportunit_log &		
+		
+11. //BallBearing		
+sudo docker start 9b4ef550d74b		
+sudo docker attach 9b4ef550d74b		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_BallBearing &> ballbearing_log &		
+		
+12. //CantileverPin		
+sudo docker start cf0a472861e7		
+sudo docker attach cf0a472861e7		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_CantileverPin &> cantileverpin_log &		
+		
+13. //BearingHolder		
+sudo docker start 248f81ecda55		
+sudo docker attach 248f81ecda55		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_BearingHolder &> bearingholder_log &		
+		
+14. //Shaft		
+sudo docker start 03a8e69ae7bc		
+sudo docker attach 03a8e69ae7bc		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_Shaft &> shaft_log &		
+		
+15.//Washer		
+sudo docker start 934bf94d7434		
+sudo docker attach 934bf94d7434		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_Washer &> washer_log &		
+		
+16. //HingePin		
+sudo docker start 80ce8ee4bbca		
+sudo docker attach 80ce8ee4bbca		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_HingePin &> hingepin_log &		
+		
+17. //LocatingPinWelding		
+sudo docker start 3857fa5664c8		
+sudo docker attach 3857fa5664c8		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_LocatinPinWelding &> locatingpinwelding_log &		
+		
+18. //LocatingPin		
+sudo docker start 2cfa43b26b84		
+sudo docker attach 2cfa43b26b84		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_LocatingPin &> locatingpin_log &		
+		
+19. //LBrackets		
+sudo docker start cd891abceb70		
+sudo docker attach cd891abceb70		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_LBrackets &> lbrackets_log &		
+		
+20. //PlateBrackets		
+sudo docker start e765e6f6f9ce		
+sudo docker attach e765e6f6f9ce		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_PlateBrackets &>platebrackets_log &		
+		
+21. //Round PlateBrackets		
+sudo docker start 2c6806100e0d		
+sudo docker attach 2c6806100e0d		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_RoundPlateBrackets &>roundbrackets_log &		
+		
+22. //Convex PlateBrackets		
+sudo docker start 01134032dc7d		
+sudo docker attach 01134032dc7d		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_ConvexPlateBrackets &>convexplatebrackets_log &		
+		
+23. //ZPlateBrackets		
+sudo docker start 7df85e32cf55		
+sudo docker attach 7df85e32cf55		
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_ZBrackets &>zbrackets_log &		
