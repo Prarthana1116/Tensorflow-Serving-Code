@@ -1,0 +1,99 @@
+sudo apt-get install \apt-transport-https \ca-certificates \curl \software-properties-common
+
+curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" | sudo apt-key add -
+
+sudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu \$(lsb_release -cs)\stable-17.06"
+
+ sudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu \$lsb_release -cs \stable-17.06"
+
+ apt-cache madison docker-ee docker-ee | 17.06.0~ee-0~ubuntu-xenial | <DOCKER-EE-URL>/ubuntu xenial/stable amd64 Packages
+ 
+ 
+sudo docker build --pull -t $USER/tensorflow-serving-devel-rib -f tensorflow_serving/tools/docker/Dockerfile.devel-gpu .
+
+sudo docker run --name=tf_container_rib -it $USER/tensorflow-serving-devel-rib
+
+sudo docker cp category_model 4df722301e7e:/serving
+
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/category_model &> cat_log &
+
+python3 client.py --server=172.17.0.2:9000 --image=./testdata/washer2.JPG
+
+python -m grpc.tools.protoc ./tensorflow_serving/apis/*.proto --python_out=./category_model --grpc_python_out=./category_model --proto_path=.
+
+
+************************************************************ RIB ****************************************************************
+ 
+sudo docker build --pull -t $USER/tensorflow-serving-devel-rib -f tensorflow_serving/tools/docker/Dockerfile.devel-gpu .
+
+sudo docker run --name=tf_container_rib -it $USER/tensorflow-serving-devel-rib
+
+sudo docker cp ./model_Rib 10e1d075bd55:/serving
+
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_Rib &> rib_log &
+
+python3 client.py --server=172.17.0.3:9000 --image=../TestCase/ribtestddata/110300541220/RBDA50-50-T10__iso.JPG
+
+*********************************************************************************************************************************
+
+
+************************************************************ LINEAR BUSHING ****************************************************************
+
+sudo docker build --pull -t $USER/tensorflow-serving-devel-linearbushing -f tensorflow_serving/tools/docker/Dockerfile.devel-gpu .
+
+sudo docker run --name=tf_container_linearbushing -it $USER/tensorflow-serving-devel-linearbushing
+
+sudo docker cp ./model_LinearBushing 576322b10ae5:/serving
+
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_LinearBushing &> linerbush_log &
+
+sudo docker network inspect bridge | grep IPv4Address
+
+python3 client.py --server=172.17.0.4:9000 --image=../TestCase/linearbush/110300028730/2.JPG
+
+*********************************************************************************************************************************
+
+
+************************************************************ HEIGHT ADJ PINS ****************************************************************
+
+sudo docker build --pull -t $USER/tensorflow-serving-devel-heightadjpin -f tensorflow_serving/tools/docker/Dockerfile.devel-gpu .
+
+sudo docker run --name=tf_container_heightadjpin -it $USER/tensorflow-serving-devel-heightadjpin 
+
+sudo docker cp ./model_HeightAdjPin d4937db9dbc7:/serving
+
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_HeightAdjPin &> heightadjpin_log &
+
+python3 client.py --server=172.17.0.5:9000 --image=../TestCase/heightadjpin/110302665970/2.JPG
+
+*********************************************************************************************************************************
+
+
+************************************************************ INSPECTION PINS ****************************************************************
+
+sudo docker build --pull -t $USER/tensorflow-serving-devel-inspectionpin -f tensorflow_serving/tools/docker/Dockerfile.devel-gpu .
+
+sudo docker run --name=tf_container_inspectionpin -it $USER/tensorflow-serving-devel-inspectionpin  
+
+sudo docker cp ./model_InspectionPins 56ea5808895c:/serving
+
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_InspectionPins &> inspectionpins_log &
+
+python3 client.py --server=172.17.0.6:9000 --image=../TestCase/inspectionpin/110302031070/3.JPG
+
+*********************************************************************************************************************************
+
+
+************************************************************ SHAFT SUPPORT ****************************************************************
+
+sudo docker build --pull -t $USER/tensorflow-serving-devel-shaftsupport -f tensorflow_serving/tools/docker/Dockerfile.devel-gpu . 
+
+sudo docker run --name=tf_container_shaftsupport -it $USER/tensorflow-serving-devel-shaftsupport
+
+sudo docker cp ./model_ShaftSupport b5aea1532447:/serving 
+
+python3 client.py --server=172.17.0.6:9000 --image=../TestCase/shaftsupport/110300011320/1.JPG
+
+bazel-bin/tensorflow_serving/model_servers/tensorflow_model_server --port=9000 --model_name=inception --model_base_path=/serving/model_ShaftSupport &> shaftsupport_log &
+
+python3 client.py --server=172.17.0.7:9000 --image=../TestCase/inspectionpin/110302031070/3.JPG
